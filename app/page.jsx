@@ -1,13 +1,12 @@
-"use client";
+"use client"
 
-import Casa from "./casa/page";
-import Personagem from "./personagem/page";
-import Varinha from "./varinha/page";
+import Header from "./components/header/Header"
 
 export default function Home() {
   return (
     <>
-    <Casa/>
+    <Header></Header>
+    <h1>HARRY POTTER</h1>
     </>
   )
 }
