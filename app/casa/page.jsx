@@ -6,7 +6,7 @@ import { FaEdit, FaTrash } from "react-icons/fa";
 
 export default function Casa() {
     const [casas, setCasas] = useState([]);
-    const [dados, setDados] = useState({});
+    const [dados, setDados] = useState([]);
     const router = useRouter();
 
     const deletar = async (id) => {
@@ -27,7 +27,8 @@ export default function Casa() {
         async function fetchCasas() {
             try {
                 const response = await axios.get("/api/casas");
-                setCasas(response.data);
+                setCasas(response.data.data);
+                setDados(response.data.data);
             } catch (error) {
                 console.error("Error fetching data:", error);
             }
