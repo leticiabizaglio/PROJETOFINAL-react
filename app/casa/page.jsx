@@ -6,6 +6,7 @@ import { FaEdit, FaTrash } from "react-icons/fa";
 
 export default function Casa() {
     const [casas, setCasas] = useState([]);
+    const [dados, setDados] = useState({});
     const router = useRouter();
 
     const deletar = async (id) => {
@@ -40,7 +41,7 @@ export default function Casa() {
             <div>
                 <h1>Casas</h1>
 
-                {casas.length ? (
+                {dados.length ? (
                     <div>
                     {casas.map((casa) => (
                         <div key={casa.id} >
