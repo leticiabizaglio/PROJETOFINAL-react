@@ -51,17 +51,16 @@ export default function Varinha() {
                                 <strong>ID:</strong> {varinha.id}
                             </p>
                             <p>
-                                <strong>Nome:</strong> {varinha.nome}
+                                <strong>Imagem:</strong> {varinha.imagem}
                             </p>
                             <p>
-                                <strong>Imagem:</strong> {varinha.imagem}
+                                <strong>Descrição:</strong> {varinha.descricao}
                             </p>
                             <p>
                                 <strong>Origem:</strong> {varinha.origem}
                             </p>
-                            <p>
-                                <strong>Descrição:</strong> {varinha.descricao}
-                                </p>
+                            
+                
                         </div>
 
                                 <div >
