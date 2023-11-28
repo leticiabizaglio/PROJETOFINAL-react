@@ -7,6 +7,7 @@ import Varinha from "./varinha/page";
 export default function Home() {
   return (
     <>
+    <Casa/>
     </>
   )
 }
