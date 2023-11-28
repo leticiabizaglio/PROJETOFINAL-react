@@ -1,40 +1,94 @@
+"use client"
 import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
+import axios from "axios";
+import { FaEdit, FaTrash } from "react-icons/fa";
 
 export default function Personagem() {
-    const [personagens, setPersoneagens] = useState([]);
-    const [dados, setDados] = useState({});
+    const [personagem, setPersonagem] = useState([]);
+    const [dados, setDados] = useState([]);
     const router = useRouter();
-
 
     const deletar = async (id) => {
         const url = `/api/personagens/${id}`;
         try {
             await axios.delete(url);
-            setDados(dados.filter((personagem) => personagem.id !== id));
+            setPersonagem(personagem.filter((personagem) => personagem.id !== id));
         } catch (error) {
             console.error("Error fetching data:", error);
         }
     }
+
     const update = async (id) => {
         router.push(`/personagens/${id}`);
     };
 
     useEffect(() => {
-        async function fetchPersonagens() {
+        async function fetchPersonagem() {
             try {
-                const response = await axios.get("/api/personagens");
-                setPersoneagens(response.data);
-                setDados(response.data)
+                const response = await axios.get("/api/personagem");
+                setPersonagem(response.data.data);
+                setDados(response.data.data);
             } catch (error) {
                 console.error("Error fetching data:", error);
             }
         }
-        fetchPersonagens();
+        fetchPersonagem();
     },[]);
 
     return(
-        <div className={styles.container}></div>
+        <div>
+            <h1>HARRY POTTER</h1>
+            <div>
+                <h1>Personagens</h1>
+
+                {dados.length ? (
+                    <div>
+                    {personagem.map((personagem) => (
+                        <div key={personagem.id} >
+                        <div>
+                            <p>
+                                <strong>ID:</strong> {personagem.id}
+                            </p>
+                            <p>
+                                <strong>Nome:</strong> {personagem.nome}
+                            </p>
+                            <p>
+                                <strong>Imagem:</strong> {personagem.imagem}
+                            </p>
+                            <p>
+                                <strong>Casa:</strong> {personagem.casa}
+                            </p>
+                            <p>
+                                <strong>Patrono:</strong> {personagem.patrono}
+                            </p>
+                            <p>
+                                <strong>Varinha:</strong> {personagem.varinha}
+                            </p>
+                            <p>
+                                <strong>Ator:</strong> {personagem.ator}
+                            </p>
+                        </div>
+
+                                <div >
+                                    <button
+                                        onClick={() => deletar(personagem.id)}
+                                    >
+                                        <FaTrash /> Deletar
+                                    </button>
+                                    <button
+                                        onClick={() => update(personagem.id)}
+                                    >
+                                        <FaEdit /> Atualizar
+                                    </button>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                ) : (
+                    <p>Carregado...</p>
+                )}
+            </div>
+        </div>
     )
 }
