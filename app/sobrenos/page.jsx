@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import axios from "axios";
 import { FaEdit, FaTrash } from "react-icons/fa";
 
@@ -55,9 +55,7 @@ export default function Sobrenos(){
                                 <p>
                                     <strong>Nome:</strong> {sobrenos.nome}
                                 </p>
-                                <p>
-                                    <strong>Imagem:</strong> {sobrenos.imagem}
-                                </p>
+                                 <img src={sobrenos.imagem} alt={sobrenos.imagem} width={200} height={200} /> 
                                 <p>
                                     <strong>Idade:</strong> {sobrenos.idade}
                                 </p>
