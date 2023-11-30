@@ -9,8 +9,8 @@ const Header = () => {
             <Link href="/casa">Casas</Link>
             <Link href="/varinha">Varinhas</Link>
             <Link href="/personagem/cadastro-personagem">Registro</Link>
-            <Link href="/sobrenos/cadastro-sobrenos">Registro Sobre</Link>
+            <Link href="/sobrenos/cadastro-sobrenos"> Sobre</Link>
         </>
     );
 }
-export default Header
+export default Header;
