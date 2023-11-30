@@ -21,14 +21,14 @@ export default function CadastroPersonagem() {
         e.preventDefault();
 
         try{
-            await axios.post("/api/personagens", {nome, imagem, casa, patrono, varinha, ator});
+            await axios.post("/api/personagem", {nome, imagem, casa, patrono, varinha, ator});
             setNome("");
             setImagem("");
             setCasa("");
             setPatrono("");
             setVarinha("");
             setAtor("");
-            router.push(`/personagens/`);
+            router.push(`/personagem/`);
         } catch (error){
             console.log("Error creating personagem:", error);
         }
