@@ -1,0 +1,34 @@
+.global{
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    border: 10px gold inset;
+    padding: 40px;
+}
+.imgFrame{
+    max-width: 200%;
+    max-height: 200%;
+}
+.img{
+    width: 200%;
+    height: 200%;
+}
+.title{
+    font-family: 'Yeseva One', serif;
+    font-size: 150%;
+}
+.infoContainer1{
+    display: flex;
+    gap: 20px;
+}
+.infoContainer2{
+    display: flex;
+}
+.info{
+    max-width: 20%;
+
+}
