@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import styles from "./cadastropersonagem.module.css";
 import Link from "next/link";
+import PopUp from "@/app/components/popUp/PopUp";
 
 export default function CadastroPersonagem() {
     const [nome, setNome] = useState("");
@@ -13,8 +14,10 @@ export default function CadastroPersonagem() {
     const [varinha, setVarinha] = useState("");
     const [ator, setAtor] = useState("");
     const [personagens, setPersonagens] = useState([]);
+    const [showPopUp, setShowPopUp] = useState(false);
+    const [ popUpmessage, setPopUpMessage] = useState('');
+    const [popUpType, setPopUpType] = useState('');
     const router = useRouter();
-
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -27,9 +30,10 @@ export default function CadastroPersonagem() {
             setPatrono("");
             setVarinha("");
             setAtor("");
+            handleShowPopUp("success", "Personagem criado com sucesso!", 4000);
             router.push(`/personagem/`);
         } catch (error){
-            console.log("Error creating personagem:", error);
+            handleShowPopUp("error", "Erro ao criar personagem!", 4000);
         }
     };
 
@@ -45,6 +49,14 @@ export default function CadastroPersonagem() {
 
         fetchPersonagens();
     }, []);
+    function handleShowPopUp(type, message, time){
+      setPopUpMessage(message);
+      setPopUpType(type);
+      setShowPopUp(true);
+      setTimeout(()=>{
+          setShowPopUp(false);
+      }, 4000)
+  }
 
     return(
         <div className={styles.container}>
@@ -52,7 +64,7 @@ export default function CadastroPersonagem() {
       <div className={styles.actions}>
         <Link href="/personagem">
           <button className={`${styles.button} ${styles.primaryButton}`}>
-            Voltar para Personagens
+            Voltar para Personagen
           </button>
         </Link>
       </div>
@@ -141,6 +153,7 @@ export default function CadastroPersonagem() {
               />
             </div>
 
+      
           <button
             type="submit"
             className={`${styles.button} ${styles.submitButton}`}
@@ -148,6 +161,9 @@ export default function CadastroPersonagem() {
             Cadastrar
           </button>
         </form>
+      { showPopUp ? (
+        <PopUp message={popUpmessage} type={popUpType} />
+      ): null}
       </div>
     </div>
     )
