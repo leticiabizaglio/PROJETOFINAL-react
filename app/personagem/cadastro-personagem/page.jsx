@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import styles from "./cadastropersonagem.module.css";
 import Link from "next/link";
 
-
 export default function CadastroPersonagem() {
     const [nome, setNome] = useState("");
     const [imagem, setImagem] = useState("");
