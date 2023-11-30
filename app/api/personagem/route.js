@@ -19,4 +19,17 @@ export async function GET() {
             return new NextResponse("Erro interno do servidor!", { status: 500 });
         }
     }
+    
 }
+export async function POST(request) {
+    const body = await request.json();
+  
+    try {
+      const response = await axios.post(url, body);
+  
+      return NextResponse.json(response.data);
+    } catch (error) {
+      console.log("[ORDER_POST]", error);
+      return new NextResponse("Erro interno do servidor!", { status: 500 });
+    }
+  }

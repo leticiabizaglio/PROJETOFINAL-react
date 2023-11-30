@@ -17,6 +17,7 @@ export async function GET(request, { params }) {
   }
 }
 
+
 export async function PUT(request, { params }) {
   const { id } = params;
   const body = await request.json();
