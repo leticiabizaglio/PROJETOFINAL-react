@@ -1,5 +1,4 @@
 import axios from "axios";
-
 import { NextResponse } from "next/server";
 
 const url = process.env.BASE_URL + "/casas";
