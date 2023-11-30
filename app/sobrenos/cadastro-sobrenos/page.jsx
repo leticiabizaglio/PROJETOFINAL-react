@@ -50,7 +50,7 @@ return(
   <div className={styles.actions}>
     <Link href="/sobrenos">
       <button className={`${styles.button} ${styles.primaryButton}`}>
-        Voltar para Personagens
+        Voltar para Sobrenos
       </button>
     </Link>
   </div>
