@@ -50,9 +50,7 @@ export default function Varinha() {
                             <p>
                                 <strong>ID:</strong> {varinha.id}
                             </p>
-                            <p>
-                                <strong>Imagem:</strong> {varinha.imagem}
-                            </p>
+                            <img src={varinha.imagem} alt={varinha.nome} width={200} height={200} />
                             <p>
                                 <strong>Descrição:</strong> {varinha.descricao}
                             </p>

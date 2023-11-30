@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import { FaEdit, FaTrash } from "react-icons/fa";
+import Image from 'next/image';
 
 export default function Personagem() {
     const [personagem, setPersonagem] = useState([]);
@@ -53,9 +54,10 @@ export default function Personagem() {
                             <p>
                                 <strong>Nome:</strong> {personagem.nome}
                             </p>
-                            <p>
-                                <strong>Imagem:</strong> {personagem.imagem}
-                            </p>
+                            
+                                <img src={personagem.imagem} alt={personagem.nome} width={200} height={200} />
+                                
+                            
                             <p>
                                 <strong>Casa:</strong> {personagem.casa}
                             </p>

@@ -4,6 +4,7 @@ const Header = () => {
         <>
         <Link href="/page.jsx">Home</Link>
             <Link href="/">Sobre HP</Link>
+            <Link href="/sobrenos">Sobrenos</Link>
             <Link href="/personagem">Bruxos</Link>
             <Link href="/casa">Casas</Link>
             <Link href="/varinha">Varinhas</Link>

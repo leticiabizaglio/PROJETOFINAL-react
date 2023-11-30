@@ -53,9 +53,7 @@ export default function Casa() {
                             <p>
                                 <strong>Nome:</strong> {casa.nome}
                             </p>
-                            <p>
-                                <strong>Imagem:</strong> {casa.imagem}
-                            </p>
+                            <img src={casa.imagem} alt={casa.nome} width={200} height={200} />
                             <p>
                                 <strong>Origem:</strong> {casa.origem}
                             </p>
