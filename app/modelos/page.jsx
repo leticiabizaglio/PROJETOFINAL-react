@@ -9,7 +9,7 @@ export default function Page() {
       <div className={style.container}>
       <div className={style.infoContainer1}>
         <div className={style.imgFrame}>
-          <img className={style.img} href="#" alt="name"></img>
+          <img className={style.img} src='https://pop.proddigital.com.br/wp-content/uploads/sites/8/2022/12/serie-no-universo-harry-potter-pode-ser-realidade-confira-reproducao-hbo-max.jpg' alt="name"></img>
         </div>
         {/* casa um dessas infos é uma das informações da api, fora a imagem */}
         <div className={style.info}>

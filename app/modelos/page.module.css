@@ -1,32 +1,47 @@
 .global{
     display: flex;
     flex-direction: column;
+    color: #fdfcfc;
 }
 .container{
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     margin: 20px;
     border: 10px gold inset;
     padding: 40px;
-}
-.imgFrame{
-    max-width: 200%;
-    max-height: 200%;
+    background-image: linear-gradient( rgb(37, 37, 54), rgb(56, 56, 92));
 }
 .img{
-    width: 200%;
-    height: 200%;
+    max-width: 350px;
+    max-height: 350px;
+    height: 300px;
+}
+.imgFrame{
+    margin-right: 30px;
+    display: flex;
+    max-width: 200%;
+    max-height: 200%;
 }
 .title{
     font-family: 'Yeseva One', serif;
     font-size: 150%;
+    color: rgb(199, 169, 0);
 }
 .infoContainer1{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
     gap: 20px;
 }
 .infoContainer2{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
 }
 .info{
     max-width: 20%;
