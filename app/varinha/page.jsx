@@ -20,7 +20,7 @@ export default function Varinha() {
     }
 
     const update = async (id) => {
-        router.push(`/varinhas/${id}`);
+        router.push(`/varinha/${id}`);
     };
 
     useEffect(() => {
