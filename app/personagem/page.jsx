@@ -27,7 +27,7 @@ export default function Personagem() {
     useEffect(() => {
         async function fetchPersonagem() {
             try {
-                const response = await axios.get("/api/personagem");
+                const response = await axios.get("/api/personagens");
                 setPersonagem(response.data.data);
                 setDados(response.data.data);
             } catch (error) {

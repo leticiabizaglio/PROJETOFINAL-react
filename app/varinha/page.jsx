@@ -26,7 +26,7 @@ export default function Varinha() {
     useEffect(() => {
         async function fetchVarinha() {
             try {
-                const response = await axios.get("/api/varinha");
+                const response = await axios.get("/api/varinhas");
                 setVarinha(response.data.data);
                 setDados(response.data.data);
             } catch (error) {
