@@ -11,7 +11,7 @@ export default function Home() {
     <div>
       <Header></Header>
       <h1>HARRY POTTER</h1>
-      <div style={style.container}>
+      <div className={style.container}>
         <div className={style.section1}>
           <div className={style.bg}>{/* imagem hogwarts Legacy */}</div>
           <h1>Você já conferiu</h1>
@@ -19,7 +19,9 @@ export default function Home() {
             Hogwarts Legacy
           </Link>
         </div>
+
         <br></br>
+
         <div className={style.section2}>
           <div className={style.bg}>{/* imagem aleatoria harry potter */}</div>
           <h1>E o novo documentario?</h1>
@@ -27,8 +29,27 @@ export default function Home() {
             Comemoração 20 anos de Harry Potter
           </Link>
         </div>
+
+        <br></br>
+
+        <div className={style.section3}>
+          <div className={style.bg}>{/* imagem aleatoria harry potter */}</div>
+          <h1>Uma visão geral sobre Harry Potter</h1>
+          <Link href="/">Sobre o HP</Link>
       </div>
+
+<br></br>
+
+<div className={style.section4}>
+          <div className={style.bg}>{/* imagem aleatoria harry potter */}</div>
+          <h1>Faça seu própio Personagem!</h1>
+          <Link href="/">Link para o personagem</Link>
+      </div>
+
+
+
       <Footer></Footer>
+    </div>
     </div>
   );
 }
