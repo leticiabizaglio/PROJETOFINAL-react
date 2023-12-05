@@ -20,7 +20,7 @@ export default function Casa() {
     }
 
     const update = async (id) => {
-        router.push(`/casas/${id}`);
+        router.push(`/casa/${id}`);
     };
 
     useEffect(() => {
