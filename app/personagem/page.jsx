@@ -8,7 +8,6 @@ import Image from 'next/image';
 export default function Personagem() {
     const [personagem, setPersonagem] = useState([]);
     const [dados, setDados] = useState([]);
-    const [pesquisar, setPesquisar] = useState("");
     const router = useRouter();
 
     const deletar = async (id) => {
@@ -28,26 +27,18 @@ export default function Personagem() {
     useEffect(() => {
         async function fetchPersonagem() {
             try {
-                const response = await axios.get("/api/personagens");
+                const response = await axios.get("/api/personagens?nome=Harry");
                 setPersonagem(response.data.data);
                 setDados(response.data.data);
             } catch (error) {
                 console.error("Error fetching data:", error);
             }
         }
-        const pesquisarPersonagem = async () => {
-            console.log(pesquisarPersonagem);
-            try {
-                const response = await axios.get(`/api/personagens?nome=${pesquisar}`);
-                setPersonagem(response.data.data);
-            } catch (error) {
-                console.error("Error fetching data:", error);
-            }
-        }
-        fetchPersonagem();
-    },[]);
 
-    return(
+        fetchPersonagem();
+    }, []);
+
+    return (
         <div>
             <h1>HARRY POTTER</h1>
             <div>
@@ -55,38 +46,35 @@ export default function Personagem() {
 
                 {dados.length ? (
                     <div>
-                    {personagem.map((personagem) => (
-                        <div key={personagem.id} >
-                        <div>
-                            <p>
-                                <strong>ID:</strong> {personagem.id}
-                            </p>
-                            <p>
-                                <strong>Nome:</strong> {personagem.nome}
-                            </p>
-                            
-                                <img src={personagem.imagem} alt={personagem.nome} width={200} height={200} />
-                                
-                            
-                            <p>
-                                <strong>Casa:</strong> {personagem.casa}
-                            </p>
-                            <p>
-                                <strong>Patrono:</strong> {personagem.patrono}
-                            </p>
-                            <p>
-                                <strong>Varinha:</strong> {personagem.varinha}
-                            </p>
-                            <p>
-                                <strong>Ator:</strong> {personagem.ator}
-                            </p>
-                        </div>
+                        {personagem.map((personagem) => (
+                            <div key={personagem.id} >
+                                <div>
+                                    <p>
+                                        <strong>ID:</strong> {personagem.id}
+                                    </p>
+                                    <p>
+                                        <strong>Nome:</strong> {personagem.nome}
+                                    </p>
+
+                                    <img src={personagem.imagem} alt={personagem.nome} width={200} height={200} />
+
+
+                                    <p>
+                                        <strong>Casa:</strong> {personagem.casa}
+                                    </p>
+                                    <p>
+                                        <strong>Patrono:</strong> {personagem.patrono}
+                                    </p>
+                                    <p>
+                                        <strong>Varinha:</strong> {personagem.varinha}
+                                    </p>
+                                    <p>
+                                        <strong>Ator:</strong> {personagem.ator}
+                                    </p>
+                                </div>
 
                                 <div >
-                                    <button
-                                    onClick={() => pesquisarPersonagem() }>
 
-                                    </button>
                                     <button
                                         onClick={() => deletar(personagem.id)}
                                     >
