@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    border: 10px rgb(255, 179, 0) inset;
+    border: 5px rgb(255, 179, 0) inset;
     background-image: linear-gradient( rgb(37, 37, 54), rgb(56, 56, 92));
     margin: 20px 100px;
     padding: 40px 20px;
@@ -36,7 +36,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .infoContainer2{
     display: flex;

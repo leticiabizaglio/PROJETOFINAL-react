@@ -6,27 +6,40 @@
 }
 .container{
     width: 0;
+    cursor: pointer;
 }
-.titleContainer {
+.titleContainer{
     position: absolute;
     z-index: 2;
     top: 0;
     left: 0;
 }
 .container:hover .title {
-    transform: translateY(-20px);
+    transform: translateY(20px);
+    cursor: pointer;
+}
+.description{
+    font-family: 'Mandali', sans-serif;
+    font-size: 100%;
+    margin-left: 30px;
+}
+.container:hover .description{
+    cursor: pointer;
+    transform: translateY(20px);
 }
 
 .container:hover {
     transform: scale(1.1);
+    opacity: 0.8;
 }
-.container, .title {
+.container, .title, .description {
     transition: all 0.3s ease;
 }
 .img{
     max-width: 350px;
     max-height: 350px;
     z-index: 0;
+    opacity: 0 0.10;
 }
 .imgFrame{
     min-width: 100%;
@@ -37,12 +50,9 @@
 }
 .title{
     font-family: 'Yeseva One', serif;
-    font-size: 200%;
+    font-size: 300%;
     margin: 30px;
-    color: rgb(199, 139, 0);
-    background-image: linear-gradient(#b98200, #ffc94c);
-    background-clip: text;
-   -webkit-text-fill-color: transparent;
+    color: #fdfcfc;
 }
 .subContainer{
     background-image: url(https://pop.proddigital.com.br/wp-content/uploads/sites/8/2022/12/serie-no-universo-harry-potter-pode-ser-realidade-confira-reproducao-hbo-max.jpg);
