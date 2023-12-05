@@ -58,6 +58,9 @@ export default function Page() {
         </div>
         </div>
 
+        {/* se quiser tirar algum dos blocos de informações, nao tem problema, porem ajuste 
+        o justify-content */}
+
         <div className={style.info}>
           <h1 className={style.title}>Title5</h1>
           <div className={style.infoContainer2}>

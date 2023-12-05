@@ -6,13 +6,11 @@
 .container{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
-    margin: 20px;
-    border: 10px gold inset;
-    padding: 40px;
+    border: 10px rgb(255, 179, 0) inset;
     background-image: linear-gradient( rgb(37, 37, 54), rgb(56, 56, 92));
+    margin: 20px 100px;
+    padding: 20px 0;
 }
 .img{
     max-width: 350px;
@@ -28,19 +26,23 @@
 .title{
     font-family: 'Yeseva One', serif;
     font-size: 150%;
-    color: rgb(199, 169, 0);
+    color: rgb(199, 139, 0);
+    background-image: linear-gradient(#b98200, #ffc94c);
+    background-clip: text;
+   -webkit-text-fill-color: transparent;
 }
+
 .infoContainer1{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-bottom: 30px;
     gap: 20px;
 }
 .infoContainer2{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 40px;
 }
 .info{
