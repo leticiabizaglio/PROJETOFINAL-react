@@ -21,7 +21,7 @@ export default function Personagem() {
     }
 
     const update = async (id) => {
-        router.push(`/personagens/${id}`);
+        router.push(`/personagem/${id}`);
     };
 
     useEffect(() => {

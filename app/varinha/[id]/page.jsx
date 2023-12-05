@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import styles from "./varinha.module.css"; // Importe o CSS existente
+import styles from "./varinha.modules.css"; // Importe o CSS existente
 import Link from "next/link";
 
 export default function UpDateCasa({ params }) { 
