@@ -56,7 +56,7 @@ return(
   </div>
 
   <div className={styles.studentsContainer}>
-    <h1 className={styles.mainText}>Cadastrar Personagem</h1>
+    <h1 className={styles.mainText}> Cadastrar </h1>
 
     <form onSubmit={handleSubmit}>
             <div className={styles.formGroup}>

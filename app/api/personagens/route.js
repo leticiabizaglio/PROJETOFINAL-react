@@ -4,9 +4,15 @@ import axios from "axios";
 
 const url = process.env.BASE_URL + "/personagens";
 
-export async function GET() {
+export async function GET(request) {
+    const { searchParams } = new URL(request.url);
+
+    const name = searchParams.get("nome");
+    
+    const newURL = name ? `${url}?nome=${name}` : url;
+
     try {
-        const response = await axios.get(url);
+        const response = await axios.get(newURL);
         return NextResponse.json(response.data);
     } catch (error) {
         const params = await request.json();
