@@ -74,7 +74,7 @@ export default function Personagem() {
                                 </div>
 
                                 <div >
-
+                               
                                     <button
                                         onClick={() => deletar(personagem.id)}
                                     >
