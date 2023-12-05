@@ -8,6 +8,7 @@ import Image from 'next/image';
 export default function Personagem() {
     const [personagem, setPersonagem] = useState([]);
     const [dados, setDados] = useState([]);
+    const [pesquisar, setPesquisar] = useState("");
     const router = useRouter();
 
     const deletar = async (id) => {
@@ -30,6 +31,15 @@ export default function Personagem() {
                 const response = await axios.get("/api/personagens");
                 setPersonagem(response.data.data);
                 setDados(response.data.data);
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            }
+        }
+        const pesquisarPersonagem = async () => {
+            console.log(pesquisarPersonagem);
+            try {
+                const response = await axios.get(`/api/personagens?nome=${pesquisar}`);
+                setPersonagem(response.data.data);
             } catch (error) {
                 console.error("Error fetching data:", error);
             }
@@ -73,6 +83,10 @@ export default function Personagem() {
                         </div>
 
                                 <div >
+                                    <button
+                                    onClick={() => pesquisarPersonagem() }>
+
+                                    </button>
                                     <button
                                         onClick={() => deletar(personagem.id)}
                                     >
