@@ -74,6 +74,7 @@ export default function Personagem() {
                                 </div>
 
                                 <div >
+                                    <input type="text" onChange={(e) => setPersonagem({ ...personagem, nome: e.target.value })}></input>
                                
                                     <button
                                         onClick={() => deletar(personagem.id)}
