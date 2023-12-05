@@ -13,6 +13,7 @@ export default function Page() {
           </div>
           <div className={style.titleContainer}>
             <h1 className={style.title}>Title1</h1>
+            <p className={style.description}>Olá, eu sou o modelo! :D</p>
           </div>
         </div>
       </div>
