@@ -5,7 +5,7 @@ const Header = () => {
         <>
         <div className={style.global}>
         <Link href="/page.jsx">Home</Link>
-            <Link href="/">Sobre HP</Link>
+            <Link href="/sobreHP">Sobre HP</Link>
             <Link href="/sobrenos">Sobrenos</Link>
             <Link href="/personagem">Bruxos</Link>
             <Link href="/casa">Casas</Link>

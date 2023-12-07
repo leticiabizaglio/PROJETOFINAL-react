@@ -1,0 +1,38 @@
+.style {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #201F1E;
+    padding: 20px;
+    color: #fff;
+}
+
+.titulo {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.imagem {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.text {
+    max-width: 600px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.filme {
+    margin-bottom: 20px;
+}
+
+.filme img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
