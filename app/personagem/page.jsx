@@ -4,6 +4,8 @@ import { useRouter } from "next/navigation";
 import axios from "axios";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import Image from 'next/image';
+import Loading from "../components/loading/loading";
+import Link from "next/link";
 
 export default function Personagem() {
     const [personagem, setPersonagem] = useState([]);
@@ -107,7 +109,7 @@ export default function Personagem() {
                         ))}
                     </div>
                 ) : (
-                    <p>Carregado...</p>
+                    <p><Link href="https://petitchougfx.files.wordpress.com/2018/05/courteousrecklessafricanelephant-max-1mb.gif"></Link></p>
                 )}
             </div>
         </div>
