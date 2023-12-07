@@ -5,13 +5,12 @@ import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import style from "./page.module.css";
 import Card from "./components/card/Card";
-import Navbar from "./components/navBar/NavBar";
 // import PopUp from "./components/popUp/PopUp"
 
 export default function Home() {
   return (
     <div>
-      <Navbar></Navbar>
+      <Header></Header>
 
       <div className={style.container}>
       <h1>HARRY POTTER</h1>
