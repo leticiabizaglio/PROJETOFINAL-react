@@ -27,7 +27,7 @@ export default function Personagem() {
     useEffect(() => {
         async function fetchPersonagem() {
             try {
-                const response = await axios.get("/api/personagens?nome=Harry");
+                const response = await axios.get(`/api/personagens?nome=${setPersonagem.nome}`);
                 setPersonagem(response.data.data);
                 setDados(response.data.data);
             } catch (error) {
@@ -43,12 +43,16 @@ export default function Personagem() {
             <h1>HARRY POTTER</h1>
             <div>
                 <h1>Personagens</h1>
-
+                <div>
+                    <input type="text" onChange={(e) => setPersonagem({ ...personagem, nome: e.target.value })}></input>
+                </div>
                 {dados.length ? (
                     <div>
                         {personagem.map((personagem) => (
                             <div key={personagem.id} >
+                                 
                                 <div>
+                                   
                                     <p>
                                         <strong>ID:</strong> {personagem.id}
                                     </p>
@@ -74,7 +78,6 @@ export default function Personagem() {
                                 </div>
 
                                 <div >
-                                    <input type="text" onChange={(e) => setPersonagem({ ...personagem, nome: e.target.value })}></input>
                                
                                     <button
                                         onClick={() => deletar(personagem.id)}
