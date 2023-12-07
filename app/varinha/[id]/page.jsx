@@ -6,7 +6,7 @@ import styles from "./varinha.modules.css"; // Importe o CSS existente
 import Link from "next/link";
 
 export default function UpDateCasa({ params }) { 
-  const [descricao, setDescricao] = useState("");
+  const [dono, setDono] = useState("");
   const [origem, setOrigem] = useState("");
   const [imagem, setImagem] = useState("");
   const router = useRouter();
@@ -17,7 +17,7 @@ export default function UpDateCasa({ params }) {
       try {
         const response = await axios.get(`/api/varinhas/${id}`);
         const varinha = response.data;
-        setDescricao(varinha.descricao);
+        setDono(varinha.dono);
         setImagem(varinha.imagem);
         setOrigem(varinha.origem);
       } catch (error) {
@@ -34,7 +34,7 @@ export default function UpDateCasa({ params }) {
     e.preventDefault();
 
     try{
-      await axios.put(`/api/varinhas/${id}`, {descricao, origem, imagem});
+      await axios.put(`/api/varinhas/${id}`, {dono, origem, imagem});
       router.push(`/varinhas/`);
     } catch (error){
       console.log("Error updating varinhas:", error);
@@ -46,7 +46,7 @@ export default function UpDateCasa({ params }) {
     <div className={styles.container}>
 
       <div className={styles.actions}>
-        <Link href={`/varinhas`}>
+        <Link href={`/varinha`}>
           <button className={`${styles.button} ${styles.primaryButton}`}>
             Voltar para Varinhas
           </button>
@@ -59,15 +59,15 @@ export default function UpDateCasa({ params }) {
         {id ? (
           <form onSubmit={handleSubmit}>
             <div className={styles.formGroup}>
-              <label htmlFor="descricao" className={styles.label}>
-                Descrição:
+              <label htmlFor="dono" className={styles.label}>
+                Dono:
               </label>
               <input
                 type="text"
                 className={styles.input}
-                id="descricao"
+                id="dono"
                 value={descricao}
-                onChange={(e) => setDescricao(e.target.value)}
+                onChange={(e) => setDono(e.target.value)}
                 required
               />
             </div>

@@ -7,6 +7,7 @@ import { FaEdit, FaTrash } from "react-icons/fa";
 export default function Varinha() {
     const [varinha, setVarinha] = useState([]);
     const [dados, setDados] = useState([]);
+    const [inputFilter, setInputFilter] = useState("");
     const router = useRouter();
 
     const deletar = async (id) => {
@@ -36,11 +37,24 @@ export default function Varinha() {
         fetchVarinha();
     },[]);
 
+    const handleVarinha = (e) => {
+        setInputFilter(e.target.value);
+    };
+
+    const handlePesquisa = () => {
+        const resultado = dados.filter(varinha => varinha.dono.toLowerCase().includes(inputFilter.toLowerCase()));
+        setVarinha(resultado);
+    }
+
     return(
         <div>
             <h1>HARRY POTTER</h1>
             <div>
                 <h1>Varinhas</h1>
+                <div>
+                    <input type="text" value={inputFilter} onChange={handleVarinha}></input>
+                    <button onClick={handlePesquisa}>Pesquisar</button>
+                </div>
 
                 {dados.length ? (
                     <div>
@@ -52,7 +66,7 @@ export default function Varinha() {
                             </p>
                             <img src={varinha.imagem} alt={varinha.nome} width={200} height={200} />
                             <p>
-                                <strong>Descrição:</strong> {varinha.descricao}
+                                <strong>Dono(a):</strong> {varinha.dono}
                             </p>
                             <p>
                                 <strong>Origem:</strong> {varinha.origem}

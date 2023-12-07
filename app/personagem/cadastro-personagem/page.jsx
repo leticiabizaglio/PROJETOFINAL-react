@@ -64,7 +64,7 @@ export default function CadastroPersonagem() {
       <div className={styles.actions}>
         <Link href="/personagem">
           <button className={`${styles.button} ${styles.primaryButton}`}>
-            Voltar para Personagen
+            Voltar para Personagens
           </button>
         </Link>
       </div>
