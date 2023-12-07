@@ -3,10 +3,12 @@
     flex-direction: column;
     color: #fdfcfc;
 }
-.container{
+.subContainer{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+.container{
     border: 5px rgb(255, 179, 0) inset;
     background-image: linear-gradient( rgb(37, 37, 54), rgb(56, 56, 92));
     margin: 20px 100px;
@@ -30,6 +32,11 @@
     background-image: linear-gradient(#b98200, #ffc94c);
     background-clip: text;
    -webkit-text-fill-color: transparent;
+}
+.titleContainer{
+    padding-bottom: 20px;
+    padding-left: 20px;
+    font-size: 200%;
 }
 
 .infoContainer1{

@@ -60,8 +60,6 @@
    background-position: center;
    background-repeat: no-repeat;
     padding: 5px;
-    top: 10px;
-    left: 10px;
     position: absolute;
     width: 250px; /* Set a specific width */
     height: 250px; /* Set a specific height */
