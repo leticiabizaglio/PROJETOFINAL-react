@@ -66,7 +66,7 @@ export default function UpDateCasa({ params }) {
                 type="text"
                 className={styles.input}
                 id="dono"
-                value={descricao}
+                value={dono}
                 onChange={(e) => setDono(e.target.value)}
                 required
               />

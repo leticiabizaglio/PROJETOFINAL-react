@@ -28,8 +28,8 @@ export default function Varinha() {
         async function fetchVarinha() {
             try {
                 const response = await axios.get("/api/varinhas");
-                setVarinha(response.data.data);
-                setDados(response.data.data);
+                setVarinha(response.data);
+                setDados(response.data);
             } catch (error) {
                 console.error("Error fetching data:", error);
             }
