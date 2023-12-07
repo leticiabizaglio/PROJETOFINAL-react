@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import styles from "./cadastropersonagem.module.css";
 import Link from "next/link";
 import PopUp from "@/app/components/popUp/PopUp";
+import Header from "@/app/components/header/Header";
+import Footer from "@/app/components/footer/Footer";
 
 export default function CadastroPersonagem() {
     const [nome, setNome] = useState("");
@@ -60,6 +62,7 @@ export default function CadastroPersonagem() {
 
     return(
         <div className={styles.container}>
+          <Header/>
 
       <div className={styles.actions}>
         <Link href="/personagem">
@@ -164,6 +167,7 @@ export default function CadastroPersonagem() {
       { showPopUp ? (
         <PopUp message={popUpmessage} type={popUpType} />
       ): null}
+      <Footer/>
       </div>
     </div>
     )

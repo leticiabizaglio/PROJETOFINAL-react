@@ -6,6 +6,8 @@ import { FaEdit, FaTrash } from "react-icons/fa";
 import Image from 'next/image';
 import Loading from "../components/loading/loading";
 import Link from "next/link";
+import Header from "../components/header/Header";
+import Footer from "../components/footer/Footer";
 
 export default function Personagem() {
     const [personagem, setPersonagem] = useState([]);
@@ -53,6 +55,7 @@ export default function Personagem() {
 
     return (
         <div>
+            <Header/>
             <h1>HARRY POTTER</h1>
             <div>
                 <h1>Personagens</h1>
@@ -111,6 +114,7 @@ export default function Personagem() {
                 ) : (
                     <p><Link href="https://petitchougfx.files.wordpress.com/2018/05/courteousrecklessafricanelephant-max-1mb.gif"></Link></p>
                 )}
+                <Footer/>
             </div>
         </div>
     )
