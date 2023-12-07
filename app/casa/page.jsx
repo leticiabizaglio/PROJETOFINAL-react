@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import { FaEdit, FaTrash } from "react-icons/fa";
+import Header from "../components/header/Header";
+import Footer from "../components/footer/Footer";
 
 export default function Casa() {
     const [casas, setCasas] = useState([]);
@@ -38,6 +40,7 @@ export default function Casa() {
 
     return(
         <div>
+            <Header/>
             <h1>HARRY POTTER</h1>
             <div>
                 <h1>Casas</h1>
@@ -77,6 +80,7 @@ export default function Casa() {
                 ) : (
                     <p>Carregado...</p>
                 )}
+                <Footer/>
             </div>
         </div>
     )
