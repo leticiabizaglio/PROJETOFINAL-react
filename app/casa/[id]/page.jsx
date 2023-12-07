@@ -46,7 +46,7 @@ export default function UpDateCasa({ params }) {
     <div className={styles.container}>
 
       <div className={styles.actions}>
-        <Link href={`/casas`}>
+        <Link href={`/casa`}>
           <button className={`${styles.button} ${styles.primaryButton}`}>
             Voltar para Casas
           </button>

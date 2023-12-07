@@ -8,6 +8,7 @@ import Image from 'next/image';
 export default function Personagem() {
     const [personagem, setPersonagem] = useState([]);
     const [dados, setDados] = useState([]);
+    const [inputFilter, setInputFilter] = useState("");
     const router = useRouter();
 
     const deletar = async (id) => {
@@ -27,7 +28,8 @@ export default function Personagem() {
     useEffect(() => {
         async function fetchPersonagem() {
             try {
-                const response = await axios.get(`/api/personagens?nome=${setPersonagem.nome}`);
+
+                const response = await axios.get(`/api/personagens?nome${setPersonagem.nome}`);
                 setPersonagem(response.data.data);
                 setDados(response.data.data);
             } catch (error) {
@@ -38,21 +40,32 @@ export default function Personagem() {
         fetchPersonagem();
     }, []);
 
+    const handlePersonagem = (e) => {
+        setInputFilter(e.target.value);
+    };
+
+    const handlePesquisa = () => {
+        const resultado = dados.filter(personagem => personagem.nome.toLowerCase().includes(inputFilter.toLowerCase()));
+        setPersonagem(resultado);
+    }
+
     return (
         <div>
             <h1>HARRY POTTER</h1>
             <div>
                 <h1>Personagens</h1>
                 <div>
-                    <input type="text" onChange={(e) => setPersonagem({ ...personagem, nome: e.target.value })}></input>
+                    <input type="text" value={inputFilter} onChange={handlePersonagem}></input>
+                    <button onClick={handlePesquisa}>Pesquisar</button>
                 </div>
+
                 {dados.length ? (
                     <div>
                         {personagem.map((personagem) => (
                             <div key={personagem.id} >
-                                 
+
                                 <div>
-                                   
+
                                     <p>
                                         <strong>ID:</strong> {personagem.id}
                                     </p>
@@ -78,7 +91,7 @@ export default function Personagem() {
                                 </div>
 
                                 <div >
-                               
+
                                     <button
                                         onClick={() => deletar(personagem.id)}
                                     >

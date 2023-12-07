@@ -52,7 +52,7 @@ export default function UpDatePersonagem({ params }) {
     <div className={styles.container}>
 
       <div className={styles.actions}>
-        <Link href={`/personagens`}>
+        <Link href={`/personagem`}>
           <button className={`${styles.button} ${styles.primaryButton}`}>
             Voltar para Personagens
           </button>
