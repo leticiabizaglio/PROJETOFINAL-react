@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import styles from "./cadastropersonagem.module.css";
 import Link from "next/link";
 import PopUp from "@/app/components/popUp/PopUp";
+import Input from "@/app/components/input/Input";
 
 export default function CadastroPersonagem() {
     const [nome, setNome] = useState("");
@@ -68,6 +69,7 @@ export default function CadastroPersonagem() {
           </button>
         </Link>
       </div>
+      <Input></Input>
 
       <div className={styles.studentsContainer}>
         <h1 className={styles.mainText}>Cadastrar Personagem</h1>
