@@ -11,7 +11,7 @@ import Navbar from "./components/navBar/NavBar";
 export default function Home() {
   return (
     <div>
-      <Navbar></Navbar>
+      {/* <Navbar></Navbar> */}
 
       <div className={style.container}>
       <h1>HARRY POTTER</h1>
