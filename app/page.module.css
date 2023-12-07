@@ -17,3 +17,16 @@
    -webkit-text-fill-color: transparent;
 
 }
+.banner{
+    background-image: url("https://i.pinimg.com/originals/5a/ab/18/5aab18d5d3ba0f96c7091cc4cc3aae3d.jpg");
+    mask-image: linear-gradient(to top, transparent 0.5%, black 100%);
+    max-height: 1800px;
+    padding-bottom: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+.title .link{
+    z-index: 9999;
+}
