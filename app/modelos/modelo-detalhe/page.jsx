@@ -8,7 +8,7 @@ export default function Page(){
       {/* aqui começa a caixa de detalhes de um modelo */}
       <div className={style.container}>
       <div className={style.titleContainer}>
-            <h1 className={style.titleName}>Nome</h1>
+            <h1 className={style.title}>Nome</h1>
         </div>
         <div className={style.subContainer}>
       <div className={style.infoContainer1}>

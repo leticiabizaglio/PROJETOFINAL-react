@@ -4,24 +4,68 @@
     color: #fdfcfc;
 }
 .subContainer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-.container{
     border: 5px rgb(255, 179, 0) inset;
+    align-items: center;
+    justify-content: center;
     background-image: linear-gradient( rgb(37, 37, 54), rgb(56, 56, 92));
     margin: 20px 100px;
     padding: 40px 20px;
 }
+.input{
+    border-bottom: 0.5px #ffc94c inset;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background-color: transparent;
+    color: #fdfcfc;
+    font-family: 'Mandali', sans-serif;
+    font-size: 100%;
+    width: 300px;
+    height: 30px;
+}
+.buttonContainer{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+.button{
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    box-shadow: inset 2px 2px 0px #b98200,
+    inset -2px -2px 0px #ffc94c;
+    width: 100px;
+    height: 50px;
+    color: #fdfcfc;
+    font-family: 'Yeseva One', serif;
+    border-radius: 50px;
+    transition: ease 0.3s;
+}
+.button:hover{
+    cursor: pointer;
+    background-color: transparent;
+    transform: translateX(90px);
+    box-shadow: inset 2px 2px 0px #ffda84,
+    inset -2px -2px 0px #ffda83;
+    transform: scale(1.1);
+    transition: ease 0.3s;
+}
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 .img{
-    max-width: 350px;
-    max-height: 350px;
-    height: 300px;
+    max-width: 400%;
+    max-height: 400%;
+    height: 400px;
 }
 .imgFrame{
     margin-right: 30px;
-    display: flex;
     max-width: 200%;
     max-height: 200%;
 }
@@ -37,18 +81,18 @@
     padding-bottom: 20px;
     padding-left: 20px;
     font-size: 200%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .infoContainer1{
     display: flex;
     align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
     justify-content: space-evenly;
     margin-bottom: 20px;
-}
-.infoContainer2{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
 }
 .info{
     max-width: 30%;
