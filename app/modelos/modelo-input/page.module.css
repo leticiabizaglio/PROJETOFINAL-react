@@ -71,7 +71,8 @@
 }
 .title{
     font-family: 'Yeseva One', serif;
-    font-size: 200%;
+    font-size: 30px;
+    width: max-content;
     color: rgb(199, 139, 0);
     background-image: linear-gradient(#b98200, #ffc94c);
     background-clip: text;
