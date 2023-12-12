@@ -13,9 +13,6 @@ export default function Home() {
     <div className={style.container}>
       <Header></Header>
 
-     
-      <h1>HARRY POTTER</h1>
-
       <div className={style.section1}>
         <div className={style.sectionContainer}>
           <div className={style.mainText}>
@@ -33,6 +30,22 @@ export default function Home() {
       </div>
 
         <hr className={style.hr}></hr>
+
+        <div className={style.section1}>
+        <div className={style.sectionContainer}>
+          <div className={style.mainText}>
+            <p className={style.title}>20 anos de Harry Potter!</p>
+            <p className={style.subtitle}>Documentário da HBOMAX</p>
+          </div>
+          <div className={style.imageContainer}>
+            <img className={style.img} src="https://www.planocritico.com/wp-content/uploads/2022/01/harry-potter-20-anos-hogwarts-plano-critico.jpg"></img>
+          </div>
+          <div className={style.linkSection}>
+            <Link className={style.link} href={"https://youtu.be/FhJx6bNBlTY?feature=shared"}>Assita ao trailer</Link>
+            <FaArrowRight className={style.arrowIcon}/>
+          </div>
+        </div>
+      </div>
 
       
 
