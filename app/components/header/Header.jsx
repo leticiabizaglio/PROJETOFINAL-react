@@ -14,7 +14,7 @@ const Header = () => {
             <div className={style.global}>
                 <div className={style.nav}>
                     <Link href="/" className={style.title}>
-                        <img  className={style.logo} src={"https://i.pinimg.com/564x/06/29/52/06295224a7db897d1e4f742eccfb7951.jpg"}></img>
+                        <img  className={style.logo} src={'./../public/semfundo.png'}/>
                     </Link>
                     <div className={style.menu} onClick={() => setMenuOpen(!menuOpen)}>
                         <span className={style.line}></span>

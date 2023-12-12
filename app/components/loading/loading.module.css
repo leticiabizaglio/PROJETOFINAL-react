@@ -1,3 +1,21 @@
-.image{
-    background-image: url(https://petitchougfx.files.wordpress.com/2018/05/courteousrecklessafricanelephant-max-1mb.gif);
+.global {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* .image {
+    animation: spin 2s linear infinite;
+} */
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
