@@ -6,9 +6,11 @@ const url = process.env.BASE_URL + "/personagens";
 
 export async function GET(request, { params }) {
   const { id } = params;
+  console.log("id", id);
 
   try {
     const response = await axios.get(`${url}/${id}`);
+    //console.log("response", response.data);
 
     return NextResponse.json(response.data);
   } catch (error) {

@@ -10,7 +10,7 @@
     align-items: center;
     text-align: center;
 }
-.section2{
+.section2, .section3, .section4{
     display: flex;
     flex-direction: column;
     margin-top: 10rem;
@@ -20,14 +20,14 @@
 
 }
 .mainText, .linkSection{
-    margin: 40px;
+    margin: 10px;
     font-size: 150%;
     align-items: center;
     text-align: center;
 }
 .arrowIcon{
-    margin-left: 30px;
-    width: 90px;
+    margin-left: 10px;
+    width: 40px;
     transition: ease 0.5s;
 }
 .link{
@@ -72,4 +72,29 @@
 }
 .divisory{
     width: 100%;
+}
+.section0{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+.subMainTitle{
+    text-decoration: none;
+    color: #dfddeb;
+    font-size: 100%;
+}
+.mainTitle{
+    font-family: 'Yeseva One', serif;
+    font-size: 700%;
+   transition: ease 0.5s;
+}
+.mainTitle:hover{
+    cursor: pointer;
+    transition: ease 0.5s;
+    color: #ffcd57;
+    text-shadow: 2px 2px 20px #ffc64266;
 }
