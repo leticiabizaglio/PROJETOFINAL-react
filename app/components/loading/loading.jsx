@@ -1,10 +1,13 @@
-import style from "./loading.module.css";
+import React from 'react';
+import style from './loading.module.css';
 
 const Loading = () => {
-    <div className={style.global}>
-        <div className={style.image}>
-            <img src="https://static.thenounproject.com/png/2185221-200.png"></img>
+    return (
+        <div className={style.global}>
+            <div className={style.image}>
+                <img src="https://petitchougfx.files.wordpress.com/2018/05/courteousrecklessafricanelephant-max-1mb.gif" alt="Loading..."></img>
+            </div>
         </div>
-    </div>
+    )
 }
 export default Loading;
