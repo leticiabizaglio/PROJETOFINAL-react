@@ -31,12 +31,12 @@
     padding: 0.5rem;
     margin: 0 0.5rem;
     border-radius: 0.5rem;
+    transition: 0.3s;
 }
  .li:hover{
-    background-color: #6b6b95;
+    transform: scale(1.1);
     transition: 0.3s;
     opacity: 10px;
-    border-radius: 10px;
  }
 
 .nav .menu{
@@ -73,7 +73,7 @@
         display: flex;
     }
     .li:hover{
-        background-color: #6b6b95;
+        transform: scale(1.1);
         transition: 0.3s;
         opacity: 10px;
         border-radius: 10px;
