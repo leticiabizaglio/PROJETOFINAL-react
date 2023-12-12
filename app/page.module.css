@@ -10,7 +10,7 @@
 .section2{
     display: flex;
     flex-direction: column;
-    margin-top: 60rem;
+    margin-top: 10rem;
 }
 .mainText, .linkSection{
     margin: 40px;

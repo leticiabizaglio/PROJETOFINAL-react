@@ -31,7 +31,7 @@ export default function Home() {
 
         <hr className={style.hr}></hr>
 
-        <div className={style.section1}>
+        <div className={style.section2}>
         <div className={style.sectionContainer}>
           <div className={style.mainText}>
             <p className={style.title}>20 anos de Harry Potter!</p>
