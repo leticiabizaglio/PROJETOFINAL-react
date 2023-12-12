@@ -66,7 +66,7 @@ export default function UpDateCasa({ params }) {
                 type="text"
                 className={styles.input}
                 id="nome"
-                value={name}
+                value={nome}
                 onChange={(e) => setNome(e.target.value)}
                 required
               />
