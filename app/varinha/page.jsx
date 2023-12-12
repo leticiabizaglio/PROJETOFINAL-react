@@ -63,35 +63,20 @@ export default function Varinha() {
                 {dados.length ? (
                     <div>
                     {varinha.map((varinha) => (
-                        <div key={varinha.id} >
-                        <div>
-                            <p>
-                                <strong>ID:</strong> {varinha.id}
-                            </p>
-                            <img src={varinha.imagem} alt={varinha.nome} width={200} height={200} />
-                            <p>
-                                <strong>Dono(a):</strong> {varinha.dono}
-                            </p>
-                            <p>
-                                <strong>Origem:</strong> {varinha.origem}
-                            </p>
-                            
-                
-                        </div>
-
-                                <div >
-                                    <button
-                                        onClick={() => deletar(varinha.id)}
-                                    >
-                                        <FaTrash /> Deletar
-                                    </button>
-                                    <button
-                                        onClick={() => update(varinha.id)}
-                                    >
-                                        <FaEdit /> Atualizar
-                                    </button>
-                                </div>
-                            </div>
+                       <div className={style.global}>
+                       {/* aqui começa a caixa de detalhes de um modelo */}
+                       <div className={style.container} onClick={() => redirecionar("Felipe")}>
+                         <div className={style.subContainer}>
+                 
+                           <div className={style.imgFrame}>
+                           </div>
+                           <div className={style.titleContainer}>
+                             <h1 className={style.title}>Title1</h1>
+                             <p className={style.description}>Ola eu sou um modelo</p>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
                         ))}
                     </div>
                 ) : (
