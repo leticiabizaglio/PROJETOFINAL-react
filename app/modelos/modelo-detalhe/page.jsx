@@ -1,6 +1,7 @@
 import { useRouter } from "next/navigation";
 import style from "./page.module.css";
 import Link from "next/link";
+import Divisory from "@/app/components/divisory/Divisory";
 
 export default function Page(){
   return (
@@ -14,8 +15,10 @@ export default function Page(){
       <div className={style.infoContainer1}>
         <div className={style.imgFrame}>
           <img className={style.img} src='https://pop.proddigital.com.br/wp-content/uploads/sites/8/2022/12/serie-no-universo-harry-potter-pode-ser-realidade-confira-reproducao-hbo-max.jpg' alt="name"></img>
+          
         </div>
         {/* casa um dessas infos é uma das informações da api, fora a imagem */}
+        
         <div className={style.info}>
           <h1 className={style.title}>Title1</h1>
           <p className={style.description}>

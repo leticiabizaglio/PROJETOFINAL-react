@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     color: #fdfcfc;
+    background-image: linear-gradient(to right, #252536, #898661);
 }
 .subContainer{
     display: flex;
@@ -13,6 +14,9 @@
     background-image: linear-gradient( rgb(37, 37, 54), rgb(56, 56, 92));
     margin: 20px 100px;
     padding: 40px 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 .img{
     max-width: 350px;
