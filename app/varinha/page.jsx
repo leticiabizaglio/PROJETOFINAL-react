@@ -5,6 +5,7 @@ import axios from "axios";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
+import Loading from "../components/loading/loading";
 
 export default function Varinha() {
     const [varinha, setVarinha] = useState([]);
@@ -94,7 +95,7 @@ export default function Varinha() {
                         ))}
                     </div>
                 ) : (
-                    <p>Carregado...</p>
+                    <p><Loading></Loading></p>
                 )}
                 <Footer/>
             </div>

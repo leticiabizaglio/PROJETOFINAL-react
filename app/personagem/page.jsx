@@ -112,7 +112,7 @@ export default function Personagem() {
                         ))}
                     </div>
                 ) : (
-                    <p><Link href="https://petitchougfx.files.wordpress.com/2018/05/courteousrecklessafricanelephant-max-1mb.gif"></Link></p>
+                    <p><Loading></Loading></p>
                 )}
                 <Footer/>
             </div>
