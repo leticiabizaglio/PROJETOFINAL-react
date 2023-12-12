@@ -3,6 +3,8 @@ import style from "./header.module.css";
 import React, {useState} from "react";
 import { FaHatWizard } from "react-icons/fa6";
 import { FaWandSparkles } from "react-icons/fa6";
+import { GiGriffinShield } from "react-icons/gi";
+import { FaFeatherAlt } from "react-icons/fa";
 import { FaHouseChimney } from "react-icons/fa6";
 import { AiFillThunderbolt } from "react-icons/ai";
 import { MdLibraryBooks } from "react-icons/md";
@@ -34,7 +36,7 @@ const Header = () => {
                         </li>
                         <li className={style.li}>
                             <Link href="/casa">
-                            <FaHouseChimney />  Casas
+                            <GiGriffinShield />  Casas
                             </Link>
                         </li>
                         <li className={style.li}>
@@ -44,7 +46,7 @@ const Header = () => {
                         </li>
                         <li className={style.li}>
                             <Link href="/personagem/cadastrso-personagem">
-                            <MdLibraryBooks />   Cadastro
+                            <FaFeatherAlt />   Cadastro
                             </Link>
                         </li>
                     </div>
