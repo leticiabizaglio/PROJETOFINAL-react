@@ -1,18 +1,55 @@
 import Link from "next/link";
 import style from "./header.module.css";
+import React, {useState} from "react";
+import { FaHatWizard } from "react-icons/fa6";
+import { FaWandSparkles } from "react-icons/fa6";
+import { FaHouseChimney } from "react-icons/fa6";
+import { AiFillThunderbolt } from "react-icons/ai";
+import { MdLibraryBooks } from "react-icons/md";
 const Header = () => {
+
+    const [menuOpen, setMenuOpen] = useState(false);
     return (
         <>
-        <div className={style.global}>
-        <Link href="/page.jsx">Home</Link>
-            <Link href="/sobreHP">Sobre HP</Link>
-            <Link href="/sobrenos">Sobrenos</Link>
-            <Link href="/personagem">Bruxos</Link>
-            <Link href="/casa">Casas</Link>
-            <Link href="/varinha">Varinhas</Link>
-            <Link href="/personagem/cadastrso-personagem">Registro</Link>
-            <Link href="/sobrenos/cadastro-sobrenos"> Sobre</Link>
-        </div>
+            <div className={style.global}>
+                <div className={style.nav}>
+                    <Link href="/" className={style.title}>
+                        <img  className={style.logo} src={"https://i.pinimg.com/564x/06/29/52/06295224a7db897d1e4f742eccfb7951.jpg"}></img>
+                    </Link>
+                    <div className={style.menu} onClick={() => setMenuOpen(!menuOpen)}>
+                        <span className={style.line}></span>
+                        <span className={style.line}></span>
+                        <span className={style.line}></span>
+                    </div>
+                    <div className={style.ul} style={{display: menuOpen ? "block" : ""}}>
+                        <li className={style.li}>
+                            <Link href="/sobreHP">
+                            <AiFillThunderbolt />   Sobre HP</Link>
+                        </li>
+
+                        <li className={style.li}>
+                            <Link href="/personagem">
+                            <FaHatWizard />   Bruxos
+                            </Link>
+                        </li>
+                        <li className={style.li}>
+                            <Link href="/casa">
+                            <FaHouseChimney />  Casas
+                            </Link>
+                        </li>
+                        <li className={style.li}>
+                            <Link href="/varinha">
+                            <FaWandSparkles />  Varinhas
+                                </Link>
+                        </li>
+                        <li className={style.li}>
+                            <Link href="/personagem/cadastrso-personagem">
+                            <MdLibraryBooks />   Cadastro
+                            </Link>
+                        </li>
+                    </div>
+                </div>
+            </div>
         </>
     );
 }
