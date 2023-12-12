@@ -96,9 +96,6 @@ export default function Home() {
 
       <Divisory/>
 
-
-      
-
       <Footer></Footer>
     </div>
   );
