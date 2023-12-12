@@ -18,15 +18,19 @@
 
 }
 .banner{
-    background-image: url("https://i.pinimg.com/originals/5a/ab/18/5aab18d5d3ba0f96c7091cc4cc3aae3d.jpg");
-    mask-image: linear-gradient(to top, transparent 0.5%, black 100%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.pinimg.com/originals/5a/ab/18/5aab18d5d3ba0f96c7091cc4cc3aae3d.jpg");
+    mask-image: linear-gradient(to top, transparent 0.1%, black 100%);  
     max-height: 1800px;
     padding-bottom: 350px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: 0;
+    z-index: 1;
 }
-.title .link{
+.bannerText{
     z-index: 9999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
