@@ -5,6 +5,23 @@ import Divisory from "@/app/components/divisory/Divisory";
 import { Personagem } from "@/app/personagem/page";
 
 export default function Page(personagem){
+    useEffect(() => {
+        async function fetchPersonagensDetails() {
+          try {
+            const response = await axios.get(`/api/personagens/${id}`);
+            const varinha = response.data;
+            setNome(varinha.dono);
+            setPatrono(varinha.imagem);
+            setCasa(varinha.origem);
+          } catch (error) {
+            console.error("Error fetching varinha details:", error);
+          }
+        }
+    
+        if (id) {
+            fetchPersonagensDetails();
+        }
+      }, [id]);
   
   return (
     <div className={style.global}>
