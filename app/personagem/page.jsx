@@ -15,6 +15,9 @@ export default function Personagem() {
   const [dados, setDados] = useState([]);
   const [inputFilter, setInputFilter] = useState("");
   const router = useRouter();
+  const redirecionar = (nome) => {
+    router.push(`/modelos/modelo-detalhe/${nome}`);
+  }
 
   const deletar = async (id) => {
     const url = `/api/personagens/${id}`;
