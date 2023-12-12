@@ -31,22 +31,12 @@
 .button{
     background-color: transparent;
     border: none;
-    padding: 10px;
-    box-shadow: inset 2px 2px 0px #b98200,
-    inset -2px -2px 0px #ffc94c;
-    width: 100px;
-    height: 50px;
     color: #fdfcfc;
     font-family: 'Yeseva One', serif;
-    border-radius: 50px;
     transition: ease 0.3s;
 }
 .button:hover{
     cursor: pointer;
-    background-color: transparent;
-    transform: translateX(90px);
-    box-shadow: inset 2px 2px 0px #ffda84,
-    inset -2px -2px 0px #ffda83;
     transform: scale(1.1);
     transition: ease 0.3s;
 }

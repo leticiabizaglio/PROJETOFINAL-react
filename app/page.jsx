@@ -7,7 +7,6 @@ import style from "./page.module.css";
 import Card from "./components/card/Card";
 import { FaArrowRight } from 'react-icons/fa'
 import { IoSparkles } from "react-icons/io5";
-import { GiSnitchQuidditchBall } from "react-icons/gi";
 import Sobrenos from "./sobrenos/page";
 import Divisory from "./components/divisory/Divisory";
 import { FaFeatherAlt } from "react-icons/fa";

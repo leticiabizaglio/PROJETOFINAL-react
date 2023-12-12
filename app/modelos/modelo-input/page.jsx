@@ -1,6 +1,8 @@
 import { useRouter } from "next/navigation";
 import style from "./page.module.css";
 import Link from "next/link";
+import { FaFeatherAlt } from "react-icons/fa";
+import { FaWandSparkles } from "react-icons/fa6";
 
 export default function Page() {
   return (
@@ -10,7 +12,7 @@ export default function Page() {
         
         <div className={style.subContainer}>
             <div className={style.titleContainer}>
-          <h1 className={style.title}>Nome</h1>
+          <p className={style.title}>Nome</p>
         </div>
           <div className={style.infoContainer1}>
             <div className={style.imgFrame}>
@@ -23,33 +25,32 @@ export default function Page() {
             {/* casa um dessas infos é uma das informações da api, fora a imagem */}
             <div className={style.inputContainer}>
             <div className={style.info}>
-              <h1 className={style.title}>Title1</h1>
               <input className={style.input} placeholder="Info1"></input>
             </div>
 
             <br></br>
 
             <div className={style.info}>
-              <h1 className={style.title}>Title2</h1>
               <input className={style.input} placeholder="Info1"></input>
             </div>
 
             <br></br>
 
             <div className={style.info}>
-              <h1 className={style.title}>Title3</h1>
               <input className={style.input} placeholder="Info1"></input>
             </div>
 
             <br></br>
 
             <div className={style.info}>
-              <h1 className={style.title}>Title4</h1>
               <input className={style.input} placeholder="Info1"></input>
             </div>
             <div className={style.buttonContainer}>
-                <button className={style.button}>BOTÃO1</button>
-                <button className={style.button}>BOTÃO2</button>
+                <button className={style.button}>BOTÃO1
+                <FaFeatherAlt/>
+                </button>
+                <button className={style.button}>BOTÃO2
+                <FaWandSparkles/></button>
             </div>
             </div>
           </div>

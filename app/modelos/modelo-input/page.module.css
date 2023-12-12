@@ -31,22 +31,12 @@
 .button{
     background-color: transparent;
     border: none;
-    padding: 10px;
-    box-shadow: inset 2px 2px 0px #b98200,
-    inset -2px -2px 0px #ffc94c;
-    width: 100px;
-    height: 50px;
+    font-size: 150%;
     color: #fdfcfc;
-    font-family: 'Yeseva One', serif;
-    border-radius: 50px;
     transition: ease 0.3s;
 }
 .button:hover{
     cursor: pointer;
-    background-color: transparent;
-    transform: translateX(90px);
-    box-shadow: inset 2px 2px 0px #ffda84,
-    inset -2px -2px 0px #ffda83;
     transform: scale(1.1);
     transition: ease 0.3s;
 }
@@ -71,8 +61,7 @@
 }
 .title{
     font-family: 'Yeseva One', serif;
-    font-size: 30px;
-    width: max-content;
+    font-size: 200%;
     color: rgb(199, 139, 0);
     background-image: linear-gradient(#b98200, #ffc94c);
     background-clip: text;
@@ -98,5 +87,6 @@
 }
 .info{
     max-width: 30%;
-
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
