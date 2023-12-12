@@ -18,9 +18,8 @@ export default function Home() {
           <div className={style.bannerContainer}>
             <div className={style.banner}>
               <div className={style.bannerText}>
-            <h1 className={style.title}>Você já conferiu</h1>
-          <Link className={style.link} href="https://www.hogwartslegacy.com/pt-br">
-            Hogwarts Legacy
+            <h1 className={style.titleFade}>Você já conferiu</h1>
+          <Link className={style.link} href={"https://www.hogwartslegacy.com/pt-br"}>Hogwarts Legacy
           </Link>
           </div>
             </div>

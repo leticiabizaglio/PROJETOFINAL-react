@@ -8,11 +8,24 @@
     font-family: 'Mandali', sans-serif;
     font-size: 500%;
 }
+.titleFade {
+    font-family: 'Mandali', sans-serif;
+    font-size: 500%;
+    background-image: linear-gradient(#fff, #fff);
+    background-clip: text;
+   -webkit-text-fill-color: transparent;
+   margin-left: 60rem;
+    padding-top: 30rem;
+    width: 100%;
+}
 .link{
     font-family: 'Yeseva One', serif;
-    font-size: 200%;
+    font-size: 500%;
+    width: 100%;
     color: rgb(199, 139, 0);
     background-image: linear-gradient(#b98200, #ffc94c);
+    margin-left: 60rem;
+    padding-top: 30rem;
     background-clip: text;
    -webkit-text-fill-color: transparent;
 
@@ -28,8 +41,8 @@
     z-index: 1;
 }
 .bannerText{
-    z-index: 9999;
-    position: absolute;
+    /*z-index: 9999; */
+    /*position: absolute;*/
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
