@@ -6,6 +6,7 @@ import { FaEdit, FaTrash } from "react-icons/fa";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import Loading from "../components/loading/loading";
+import style from "./page.module.css";
 
 export default function Varinha() {
     const [varinha, setVarinha] = useState([]);
@@ -50,40 +51,56 @@ export default function Varinha() {
     }
 
     return(
-        <div>
+        <div classname={style.global}>
             <Header/>
-            <h1>HARRY POTTER</h1>
-            <div>
+            <h1>Harry Potter</h1>
+            <div className={style.container}>
                 <h1>Varinhas</h1>
-                <div>
+                <div className={style.filtro}>
                     <input type="text" value={inputFilter} onChange={handleVarinha}></input>
-                    <button onClick={handlePesquisa}>Pesquisar</button>
+                    <button onClick={handlePesquisa}>Pesquisa</button>
                 </div>
 
                 {dados.length ? (
-                    <div>
-                    {varinha.map((varinha) => (
-                       <div className={style.global}>
-                       {/* aqui começa a caixa de detalhes de um modelo */}
-                       <div className={style.container} onClick={() => redirecionar("Felipe")}>
-                         <div className={style.subContainer}>
-                 
-                           <div className={style.imgFrame}>
-                           </div>
-                           <div className={style.titleContainer}>
-                             <h1 className={style.title}>Title1</h1>
-                             <p className={style.description}>Ola eu sou um modelo</p>
-                           </div>
-                         </div>
-                       </div>
-                     </div>
-                        ))}
-                    </div>
-                ) : (
-                    <p><Loading></Loading></p>
-                )}
-                <Footer/>
-            </div>
-        </div>
+          <div>
+            {varinha.map((varinha) => (
+              <div key={varinha.id}>
+                <div>
+                  <p>
+                    <strong>ID:</strong> {varinha.id}
+                  </p>
+                  <p>
+                    <strong>Dono:</strong> {varinha.dono}
+                  </p>
+                  <p>
+                    <strong>Origem:</strong> {varinha.origem}
+                  </p>
+                  <img
+                    src={varinha.imagem}
+                    alt={varinha.imagem}
+                    width={200}
+                    height={200}
+                  />
+                </div>
+
+                <div className={style.botao}>
+                  <button onClick={() => deletar(varinha.id)}>
+                    <FaTrash /> Deletar
+                  </button>
+                  <button onClick={() => update(varinha.id)}>
+                    <FaEdit /> Atualizar
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <p> 
+             <Loading></Loading> 
+          </p>
+        )}
+        <Footer />
+      </div>
+    </div>
     )
 }

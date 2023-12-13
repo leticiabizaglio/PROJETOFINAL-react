@@ -6,6 +6,7 @@ import { FaEdit, FaTrash } from "react-icons/fa";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import Loading from "../components/loading/loading";
+import style from "./page.module.css";
 
 
 export default function Sobrenos(){
@@ -32,8 +33,8 @@ export default function Sobrenos(){
             async function fetchSobrenos() {
                 try {
                     const response = await axios.get("/api/sobrenos");
-                    setSobrenos(response.data.data);
-                    setDados(response.data.data);
+                    setSobrenos(response.data);
+                    setDados(response.data);
                 } catch (error) {
                     console.error("Error fetching data:", error);
                 }
@@ -42,7 +43,7 @@ export default function Sobrenos(){
         },[]);
     
         return(
-            <div>
+            <div className={style.global}>
                 <Header/>
                 <h1>HARRY POTTER</h1>
                 <div>
@@ -59,7 +60,7 @@ export default function Sobrenos(){
                                 <p>
                                     <strong>Nome:</strong> {sobrenos.nome}
                                 </p>
-                                 <img src={sobrenos.imagem} alt={sobrenos.imagem} width={200} height={200} /> 
+                                 <img src={sobrenos.imagem} alt={sobrenos.imagem} width={200} height={200}/> 
                                 <p>
                                     <strong>Idade:</strong> {sobrenos.idade}
                                 </p>
@@ -74,7 +75,7 @@ export default function Sobrenos(){
                                 </p>
                             </div>
     
-                                    <div >
+                                    <div className={style.botao} >
                                         <button
                                             onClick={() => deletar(sobrenos.id)}
                                         >

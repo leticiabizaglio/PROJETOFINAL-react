@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import styles from "./personagem.module.css"; // Importe o CSS existente
 import Link from "next/link";
 
-export default function UpDatePersonagem({ params }) { 
+export default function UpDatePersonagem({ params }) {
   const [nome, setNome] = useState("");
   const [imagem, setImagem] = useState("");
   const [casa, setCasa] = useState("");

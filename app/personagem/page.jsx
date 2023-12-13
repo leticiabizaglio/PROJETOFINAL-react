@@ -5,7 +5,6 @@ import axios from "axios";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import Image from "next/image";
 import Loading from "../components/loading/loading";
-import Link from "next/link";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import style from "./page.module.css";
@@ -15,9 +14,6 @@ export default function Personagem() {
   const [dados, setDados] = useState([]);
   const [inputFilter, setInputFilter] = useState("");
   const router = useRouter();
-  const redirecionar = (nome) => {
-    router.push(`/modelos/modelo-detalhe/${nome}`);
-  }
 
   const deletar = async (id) => {
     const url = `/api/personagens/${id}`;
@@ -25,7 +21,7 @@ export default function Personagem() {
       await axios.delete(url);
       setPersonagem(personagem.filter((personagem) => personagem.id !== id));
     } catch (error) {
-      console.error("Error fetching data:", error);
+      console.error("Error deleting data:", error);
     }
   };
 
@@ -36,9 +32,7 @@ export default function Personagem() {
   useEffect(() => {
     async function fetchPersonagem() {
       try {
-        const response = await axios.get(
-          `/api/personagens?nome${setPersonagem.nome}`
-        );
+        const response = await axios.get(`/api/personagens?nome${setPersonagem.nome}`);
         setPersonagem(response.data.data);
         setDados(response.data.data);
       } catch (error) {
@@ -54,19 +48,19 @@ export default function Personagem() {
   };
 
   const handlePesquisa = () => {
-    const resultado = dados.filter((personagem) =>
-      personagem.nome.toLowerCase().includes(inputFilter.toLowerCase())
+    const resultado = dados.filter((person) =>
+      person.nome.toLowerCase().includes(inputFilter.toLowerCase())
     );
     setPersonagem(resultado);
   };
 
   return (
-    <div>
+    <div className={style.global}>
       <Header />
-      <h1>HARRY POTTER</h1>
-      <div>
+      <h1>Harry Potter</h1>
+      <div className={style.container}>
         <h1>Personagens</h1>
-        <div>
+        <div className={style.filtro}>
           <input
             type="text"
             value={inputFilter}
@@ -74,26 +68,38 @@ export default function Personagem() {
           ></input>
           <button onClick={handlePesquisa}>Pesquisar</button>
         </div>
-
         {dados.length ? (
           <div>
             {personagem.map((personagem) => (
-              <div key={personagem.id} className={style.container}
-              onClick={() => redirecionar(` ${personagem.id}`)}>
-                <div className={style.global}>
-                  {/* aqui começa a caixa de detalhes de um modelo */}
-                    <div className={style.subContainer}>
-                      <div className={style.imgFrame}>
-                      </div>
-                      <div className={style.titleContainer}>
-                        <h1 className={style.title}>{personagem.nome}</h1>
-                        {/* <p className={style.description}>
-                          Ola eu sou um modelo
-                        </p> */}
-                      </div>
-                    </div>
-                </div>
+              <div key={personagem.id}>
                 <div>
+                  <p>
+                    <strong>ID:</strong> {personagem.id}
+                  </p>
+                  <p>
+                    <strong>Nome:</strong> {personagem.nome}
+                  </p>
+                  <img
+                    src={personagem.imagem}
+                    alt={personagem.imagem}
+                    width={200}
+                    height={200}
+                  />
+                  <p>
+                    <strong>Casa:</strong> {personagem.casa}
+                  </p>
+                  <p>
+                    <strong>Patrono:</strong> {personagem.patrono}
+                  </p>
+                  <p>
+                    <strong>Varinha:</strong> {personagem.varinha}
+                  </p>
+                  <p>
+                    <strong>Ator:</strong> {personagem.ator}
+                  </p>
+                </div>
+
+                <div className={style.botao}>
                   <button onClick={() => deletar(personagem.id)}>
                     <FaTrash /> Deletar
                   </button>
@@ -106,7 +112,7 @@ export default function Personagem() {
           </div>
         ) : (
           <p>
-            <Loading></Loading>
+            <Loading></Loading> 
           </p>
         )}
         <Footer />
