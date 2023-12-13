@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2? family= Inter:wght@100;200;300;400;500;600 & family= Poppins:wght@100;200;300; 400;500;600 & display=swap');
+
+.global {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    background-image: linear-gradient(to right, #252536, #616189);
+
+    color: white;
+}
+
+.footer {
+    width: 100%;
+    color: var(--color-neutral-40);
+
+}
+
+.footersocialmedia .footer-link:hover {
+    opacity: 0.8;
+}
+
+.footercontent {
+    background-color: var(--color-neutral-10);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.rem;
+
+}
+
+.footercontact h1 {
+    margin-bottom: 0.75rem;
+
+}
+
+.footersocialmedia {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+
+}
+
+.footersocialmedia.footerlink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    transition: all 0.4s;
+
+}
+
+.footersocialmedia.footerlink {
+    font-size: 1.25rem;
+}
+
+.footerlist {
+    display: flex;
+    gap: 0.75rem;
+    list-style: none;
+    margin-left: 400px;
+    flex-wrap:  wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+.footerlist .footerlink {
+    color: var(--color-neutral-30);
+    transition: all 0.4s;
+}
+
+.footerlist .footerlink:hover {
+    opacity: 0.8;
+}
+
+.footerinputgroup {
+    display: flex;
+    align-items: center;
+    background-color: 4px;
+    border-radius: 4px;
+}
+
+.footerinputgroup input {
+    /* all: unset; */
+    padding: 0.75rem;
+    width: 100%;
+
+}
+
+.footerinputgroup button {
+    background-color: rgb(255, 205, 87);
+    border: none;
+    color: var(--color-neutral-40);
+    padding: 0px 1.25rem;
+    font-size: 1.0rem;
+    /* height: 100%; */
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+    width: 20px;
+    height: 50px;
+}
+
+.footerinputgroup button:hover {
+    opacity: 0.8;
+}
+
+
+.footerimg {
+    width: 100px;
+    height: 100px;
+}
+
+.sobrenos {
+    display: flex;
+    color: rgb(255, 205, 87);
+    text-decoration: none;
+  
+   
+}
+
+.contato {
+    display: flex;
+    color: rgb(255, 205, 87);
+    text-decoration: none;
+}
+
+.sobrehp {
+    display: flex;
+    color: rgb(255, 205, 87);
+    text-decoration: none;
+}
+
+.direitos {
+    position: absolute;
+    margin-top: 150px;
+}
+
+
+
+.hp {
+    text-align: center;
+    align-items: center;
+    margin-left: 525px;
+    margin-right: 100px;
+    margin-top: 10px;
+}
+
+.footerlink {
+    text-align: center;
+    align-items: center;
+    margin-left: 600px;
+    color: rgb(255, 205, 87);
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    display: inline-block;
+    transform: scale(1.1);
+    transition: 0.3s;
+    opacity: 10px;
+
+}
+
+
+.footericons1 {
+    margin-right: 10px;
+    transform: scale(1.1);
+    transition: 0.3s;
+    opacity: 10px;
+}
+
+.footericons2 {
+    margin-right: 10px;
+}
+
+.footericons3 {
+    margin-right: 10px;
+}
+
+.pgs {
+    text-align: center;
+    margin-left: 210px;
+    margin-right: 220px;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footerinputgroup {
+    margin-top: 150px;
+}
+.reservados {
+    text-align: center;
+    align-items: center;
+    margin-right: 200px;
+    display:inline-block;
+}
