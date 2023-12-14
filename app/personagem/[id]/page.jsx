@@ -4,6 +4,8 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import styles from "./personagem.module.css"; // Importe o CSS existente
 import Link from "next/link";
+import Header from "@/app/components/header/Header";
+import Footer from "@/app/components/footer/Footer";
 
 export default function UpDatePersonagem({ params }) {
   const [nome, setNome] = useState("");
@@ -49,6 +51,8 @@ export default function UpDatePersonagem({ params }) {
 
 
   return (
+    <div className={styles.pai}>
+      <Header/>
     <div className={styles.container}>
 
       <div className={styles.actions}>
@@ -155,6 +159,8 @@ export default function UpDatePersonagem({ params }) {
           <p>Carregando...</p>
         )}
       </div>
+    </div>
+    <Footer/>
     </div>
   )
 }

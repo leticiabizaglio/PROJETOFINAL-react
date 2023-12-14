@@ -1,0 +1,94 @@
+/* personagem.module.css */
+
+.pai{
+    background-image: linear-gradient(to right, #252536, #616189);
+      color: #dfddeb;
+  }
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .actions {
+    margin-bottom: 20px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 90px;
+    background-color: #d6a739;
+    color: #000000;
+    cursor: pointer;
+    font-size: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .primaryButton {
+    background-color: #ffc94c;
+    color: #252536;
+  }
+  
+  .studentsContainer {
+    text-align: center;
+  }
+  
+  .mainText {
+    margin-bottom: 20px;
+    font-family: 'Yeseva One', serif;
+    font-size: 210%;
+    color: #fff;
+    background-image: linear-gradient(#b98200, #ffc94c);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 25%;
+  }
+  
+  .formGroup {
+    margin-bottom: 20px;
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+    font-family: 'Mandali', sans-serif;
+    font-size: 135%;
+  }
+  
+  .input {
+    border-bottom: 0.5px #ffc94c inset;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background-color: transparent;
+    color: #fdfcfc;
+    font-family: 'Mandali', sans-serif;
+    font-size: 135%;
+    width: 300px;
+    height: 30px;
+    padding: 10px;
+  }
+  
+  .submitButton {
+    background-color: #d6a739;
+    color: #000;
+  }
+  
+  /* Media Query for smaller screens */
+  @media screen and (max-width: 768px) {
+    .container {
+      max-width: 100%;
+      padding: 10px;
+    }
+  
+    .input {
+      width: 100%;
+    }
+  }
+  

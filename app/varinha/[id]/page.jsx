@@ -4,6 +4,8 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import styles from "./varinha.modules.css"; // Importe o CSS existente
 import Link from "next/link";
+import Footer from "@/app/components/footer/Footer";
+import Header from "@/app/components/header/Header";
 
 export default function UpDateCasa({ params }) { 
   const [dono, setDono] = useState("");
@@ -43,6 +45,8 @@ export default function UpDateCasa({ params }) {
 
 
   return (
+    <div className={styles.pai}>
+      <Header/>
     <div className={styles.container}>
 
       <div className={styles.actions}>
@@ -110,6 +114,8 @@ export default function UpDateCasa({ params }) {
           <p>Carregando...</p>
         )}
       </div>
+    </div>
+    <Footer/>
     </div>
   )
 }
