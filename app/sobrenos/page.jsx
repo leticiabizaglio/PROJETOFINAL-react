@@ -63,7 +63,6 @@ export default function sobreNos() {
       <Divisory /><h1 className={style.h1}>Harry Potter</h1>
       <div className={style.container}>
         <h1 className={style.h2}>Sobre Nós</h1>
-  
         <div className={style.filtro}>
           <input
             className={style.input}
