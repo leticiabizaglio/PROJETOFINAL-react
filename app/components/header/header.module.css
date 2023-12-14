@@ -6,6 +6,7 @@
     position: sticky;
     color: #dfddeb;
     top: 0;
+    padding: 40px;
 }
 
 .nav .title{
@@ -33,6 +34,7 @@
     margin: 0 0.5rem;
     border-radius: 0.5rem;
     transition: 0.3s;
+    
 }
  .li:hover{
     transform: scale(1.1);
