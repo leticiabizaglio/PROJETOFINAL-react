@@ -75,12 +75,13 @@
   }
   
   .button {
-    background-color: #d6a739;
-    color: #000000;
+    background-color: transparent;
+    color: #ffffff;
     border: none;
     padding: 8px 16px;
     border-radius: 5px;
     cursor: pointer;
+    transition: ease 0.5;
   }
   
   /* Estilizando a Loading */

@@ -23,6 +23,7 @@ const Footer = () => {
                    
                         <Link href='/contato' className={style.li}>
                             Contato</Link>
+                            <Link href='/sobrenos/cadastro-sobrenos' className={style.li}>Registre-se</Link>
                   
                 </ul>
             </div>
