@@ -1,0 +1,104 @@
+/* Seu código original de contato.module.css */
+
+/* Adicionando estilos para seu novo código */
+
+/* Estilizando o container global */
+.global {
+    background-image: linear-gradient(to right, #252536, #616189);
+    color: #dfddeb;
+  }
+  
+  /* Estilizando o header */
+  .global h1 {
+    text-align: center;
+    font-size: 2em;
+    padding: 20px 0;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilizando a seção de personagens */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: white;
+  }
+  
+  /* Estilizando o filtro */
+  .filtro {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .filtro input {
+    border: none;
+    border-bottom: 2px solid #d6a739;
+    padding: 8px;
+    margin-right: 10px;
+    width: 200px;
+  }
+  
+  .filtro button {
+    background-color: #d6a739;
+    color: #000000;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Estilizando cada personagem */
+  .container > div {
+    margin-top: 20px;
+    border: 1px solid #d6a739;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  .container img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .botao {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .botao button {
+    background-color: #d6a739;
+    color: #000000;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Estilizando a Loading */
+  .container p {
+    text-align: center;
+  }
+  
+  /* Footer */
+  .global {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .escrito {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+  }
+  
