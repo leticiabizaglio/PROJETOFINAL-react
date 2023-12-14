@@ -8,7 +8,6 @@ import { FaFeatherAlt } from "react-icons/fa";
 import { FaHouseChimney } from "react-icons/fa6";
 import { AiFillThunderbolt } from "react-icons/ai";
 import { MdLibraryBooks } from "react-icons/md";
-import CadastroPersonagem from "@/app/personagem/cadastro-personagem/[id]/page";
 const Header = () => {
 
     const [menuOpen, setMenuOpen] = useState(false);
@@ -46,7 +45,7 @@ const Header = () => {
                                 </Link>
                         </li>
                         <li className={style.li}>
-                            <Link href="/personagem/cadastropersonagem">
+                            <Link href="/personagem/cadastro-personagem/cadastro">
                             <FaFeatherAlt />   Cadastro
                             </Link>
                         </li>

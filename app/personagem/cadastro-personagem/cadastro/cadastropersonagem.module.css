@@ -3,7 +3,7 @@
 /* Adicionando estilos para seu novo código */
 
 /* Estilizando o container global */
-.global {
+.container {
     background-image: linear-gradient(to right, #252536, #616189);
     color: #dfddeb;
   }
@@ -17,7 +17,7 @@
   }
   
   /* Estilizando a seção de personagens */
-  .container {
+  .actions {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,13 +67,14 @@
     margin-bottom: 10px;
   }
   
-  .botao {
+  .button {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+    text-decoration: none;
   }
   
-  .botao button {
+  .button {
     background-color: #d6a739;
     color: #000000;
     border: none;
