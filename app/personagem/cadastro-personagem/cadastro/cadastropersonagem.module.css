@@ -1,106 +1,92 @@
-/* Seu código original de contato.module.css */
+/* Mapeamento para estilos relacionados ao componente CadastroPersonagem */
 
-/* Adicionando estilos para seu novo código */
-
-/* Estilizando o container global */
 .container {
-    background-image: linear-gradient(to right, #252536, #616189);
-    color: #dfddeb;
-  }
-  
-  /* Estilizando o header */
-  .global h1 {
-    text-align: center;
-    font-size: 2em;
-    padding: 20px 0;
-    margin-bottom: 20px;
-  }
-  
-  /* Estilizando a seção de personagens */
-  .actions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    color: white;
-  }
-  
-  /* Estilizando o filtro */
-  .filtro {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .filtro input {
-    border: none;
-    border-bottom: 2px solid #d6a739;
-    padding: 8px;
-    margin-right: 10px;
-    width: 200px;
-  }
-  
-  .filtro button {
-    background-color: #d6a739;
-    color: #000000;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  /* Estilizando cada personagem */
-  .container > div {
-    margin-top: 20px;
-    border: 1px solid #d6a739;
-    border-radius: 10px;
-    padding: 10px;
-  }
-  
-  .container img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  
-  .button {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    text-decoration: none;
-  }
-  
-  .button {
-    background-color: transparent;
-    color: #ffffff;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: ease 0.5;
-  }
-  
-  /* Estilizando a Loading */
-  .container p {
-    text-align: center;
-  }
-  
-  /* Footer */
-  .global {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  }
-  
-  .escrito {
-    text-align: center;
-    margin-top: 20px;
-    color: white;
-  }
-  
+  background-image: linear-gradient(to right, #252536, #616189);
+  color: white;
+}
+
+.mainText {
+  padding-top: 80px;
+  font-size: 300%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.label {
+  padding-top: 20px;
+  font-size: 300%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input {
+  border-bottom: 0.5px #ffc94c inset;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  background-color: transparent;
+  color: #fdfcfc;
+  font-family: 'Mandali', sans-serif;
+  font-size: 15px;
+  width: 300px;
+  height: 30px;
+}
+
+.button {
+  margin-left: 46%;
+  margin-top: 10px;
+  display: flex;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: 'Yeseva One', serif;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid rgb(255, 179, 0);
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 5px;
+  outline: none;
+  text-shadow: 2px 2px 20px rgba(255, 198, 66, 0.40);
+}
+
+.button:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 179, 0, 0.582);
+}
+
+.studentsContainer {
+  border: 5px rgb(255, 179, 0) inset;
+  margin: 20px 100px;
+  padding: 40px 20px;
+  align-items: center;
+  margin-left: 290px;
+  justify-content: center;
+  text-align: center;
+  width: 60%;
+}
+
+
+
+.actions {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.primaryButton {
+  color: white;
+  background-color: transparent;
+  border: 2px solid rgb(255, 179, 0);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  text-shadow: 2px 2px 20px rgba(255, 198, 66, 0.40);
+}
+
+.primaryButton:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 179, 0, 0.582);
+}
+
+
+

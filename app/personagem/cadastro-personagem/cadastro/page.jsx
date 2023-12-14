@@ -176,8 +176,9 @@ export default function CadastroPersonagem({ params }) {
         {showPopUp ? (
           <PopUp message={popUpmessage} type={popUpType} />
         ) : null}
-        <Footer />
+       
       </div>
+      <Footer />
     </div>
   )
 }
