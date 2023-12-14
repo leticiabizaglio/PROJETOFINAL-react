@@ -113,7 +113,8 @@
 
   .imgContainer {
   
-    
+    display: flex;
+    flex-direction: column;
 
   }
   

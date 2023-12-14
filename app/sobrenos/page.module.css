@@ -1,0 +1,132 @@
+/* Seu código CSS original */
+/* ... */
+
+/* Adicione os estilos a seguir para o novo código */
+
+/* Estilizando o container global */
+.global {
+    background-image: linear-gradient(to right, #252536, #616189);
+    color: #dfddeb;
+    text-align: center;
+  }
+  
+  /* Estilizando o título principal */
+  .h1 {
+    padding-top: 80px;
+    font-size: 300%;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  /* Estilizando o subtítulo */
+  .h2 {
+    text-align: center;
+    font-family: 'Yeseva One', serif;
+    font-size: 400%;
+    margin-bottom: 90px;
+    color: white;
+    transition: ease 0.5s;
+  }
+  
+  .h2:hover {
+    cursor: pointer;
+    transition: ease 0.5s;
+    color: rgb(255, 205, 87);
+    text-shadow: 2px 2px 20px rgba(255, 198, 66, 0.40);
+  }
+  
+  /* Estilizando o filtro de pesquisa */
+  .filtro {
+    padding-top: 20px;
+    font-size: 300%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .input {
+    border-bottom: 0.5px #ffc94c inset;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background-color: transparent;
+    color: #fdfcfc;
+    font-family: 'Mandali', sans-serif;
+    font-size: 15px;
+    width: 300px;
+    height: 30px;
+  }
+  
+  /* Estilizando o botão de pesquisa */
+  .button {
+    margin-left: 46%;
+    margin-top: 10px;
+    display: flex;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Yeseva One', serif;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid rgb(255, 179, 0);
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+    outline: none;
+    text-shadow: 2px 2px 20px rgba(255, 198, 66, 0.40);
+  }
+  
+  .button:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 179, 0, 0.582);
+  }
+  
+  /* Estilizando cada card de personagem */
+  .card {
+    border: 5px rgb(255, 179, 0) inset;
+    margin: 20px auto;
+    padding: 40px 20px;
+    align-items: center;
+    width: 60%;
+    text-align: center;
+    color: #fdfcfc;
+  }
+  
+  .card:hover {
+    cursor: pointer;
+    transform: translateY(20px) scale(1.1);
+  }
+  
+  /* Estilizando a imagem do personagem */
+  .imagem {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+  }
+  
+  /* Estilizando os botões de ação */
+  .botao {
+    background-color: transparent;
+    border: none;
+    color: #fdfcfc;
+    font-family: 'Yeseva One', serif;
+    transition: ease 0.3s;
+    padding: 20px;
+  }
+  
+  .botao:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    color: rgb(255, 205, 87);
+    text-shadow: 2px 2px 20px rgba(255, 198, 66, 0.40);
+  }
+  
+  /* Estilizando o conteúdo do card */
+  .conteudo {
+    text-align: left;
+    justify-content: space-between;
+    padding-left: 150px;
+    margin-top: 40px;
+  }
+  
