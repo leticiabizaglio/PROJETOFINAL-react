@@ -7,6 +7,7 @@ import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import Loading from "../components/loading/loading";
 import style from "../casa/page.module.css"
+import Divisory from "../components/divisory/Divisory";
 
 
 export default function Casa() {
@@ -42,44 +43,52 @@ export default function Casa() {
   }, []);
 
   return (
-    <div>
+    <div  className={style.global}>
       <Header />
-      <h1>HARRY POTTER</h1>
-      <div>
-        <h1>Casas</h1>
+      <Divisory />
+      <h1 className={style.h1}>HARRY POTTER</h1>
+      <div className={style.container}>
+        <h1 className={style.h2}>Casas</h1>
 
         {dados.length ? (
-          <div>
+          <div  className={style.td}>
             {casas.map((casa) => (
               <div key={casa.id}>
-                <div>
+                <div className={style.card}>
+                <div className={style.imagem}>
+                <img
+                    src={casa.imagem}
+                    alt={casa.imagem}
+                    width={200}
+                    height={200}
+                  />
+                </div>
+                <div className={style.conteudo}>
                   <p>
                     <strong>ID:</strong> {casa.id}
                   </p>
                   <p>
                     <strong>Nome:</strong> {casa.nome}
                   </p>
-                  <img
-                    src={casa.imagem}
-                    alt={casa.imagem}
-                    width={200}
-                    height={200}
-                  />
+                  
                   <p>
                     <strong>Origem:</strong> {casa.origem}
                   </p>
                 </div>
+                
 
                 <div className={style.botao}>
-                  <button onClick={() => deletar(casa.id)}>
+                  <button className={style.botao} onClick={() => deletar(casa.id)}>
                     <FaTrash /> Deletar
                   </button>
-                  <button onClick={() => update(casa.id)}>
+                  <button className={style.botao} onClick={() => update(casa.id)}>
                     <FaEdit /> Atualizar
                   </button>
                 </div>
+                </div>
               </div>
             ))}
+            <Divisory />
           </div>
         ) : (
           <p>
