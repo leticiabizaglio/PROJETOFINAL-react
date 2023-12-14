@@ -1,0 +1,117 @@
+.global{
+    background-image: linear-gradient(to right, #252536, #616189);
+}
+.h1{
+    padding-top: 80px;
+    font-size: 300%;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+.h2 {
+    text-align: center;
+    font-family: 'Yeseva One', serif;
+    font-size: 400%;
+    margin-bottom: 90px;
+    color: white;
+    transition: ease 0.5s;
+}
+
+.h2:hover {
+    cursor: pointer;
+    transition: ease 0.5s;
+    color: rgb(255, 205, 87);
+    text-shadow: 2px 2px 20px rgba(255, 198, 66, 0.40);
+}
+.filtro{
+    padding-top: 20px;
+    font-size: 300%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.input{
+    border-bottom: 0.5px #ffc94c inset;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background-color: transparent;
+    color: #fdfcfc;
+    font-family: 'Mandali', sans-serif;
+    font-size: 15px;
+    width: 300px;
+    height: 30px;
+}
+
+.button {
+    margin-left: 46%;
+    margin-top: 10px;
+    display: flex;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Yeseva One', serif;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid  rgb(255, 179, 0);;
+    color:white;
+    background-color: transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+    outline: none; /* Remove a borda ao clicar */
+    text-shadow: 2px 2px 20px rgba(255, 198, 66, 0.40);
+}
+
+.button:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 179, 0, 0.582); 
+}
+
+.td{
+    display: flex;
+    flex-direction: column;
+    color: #fdfcfc;
+}
+.card{
+    border: 5px rgb(255, 179, 0) inset;
+    margin: 20px 100px;
+    padding: 40px 20px;
+    align-items: center;
+    margin-left: 290px;
+    justify-content: center;
+    text-align: center;
+    width: 60%;
+}
+.bnt{
+    margin-left:200px;
+}
+.card:hover{
+    cursor: pointer;
+    transform: translateY(20px);
+    transform: scale(1.1);
+}
+
+.botao {
+        background-color: transparent;
+        border: none;
+        color: #fdfcfc;
+        font-family: 'Yeseva One', serif;
+        transition: ease 0.3s;
+        padding: 20px;
+    }
+    
+    /* Efeito de hover para o botão */
+    .botao:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        color: rgb(255, 205, 87);
+    text-shadow: 2px 2px 20px rgba(255, 198, 66, 0.40);
+    }
+
+    .conteudo{
+        display: inline-block;
+        text-align: justify;
+        justify-content: space-between;
+        padding-left: 70px;
+        padding-right: 70px;
+        margin-top: 40px;
+    }
