@@ -10,7 +10,7 @@ import { IoSparkles } from "react-icons/io5";
 import Sobrenos from "./sobrenos/page";
 import Divisory from "./components/divisory/Divisory";
 import { FaFeatherAlt } from "react-icons/fa";
-import Contato from "./components/contato/page";
+
 // import PopUp from "./components/popUp/PopUp"
 
 export default function Home() {
@@ -95,7 +95,7 @@ export default function Home() {
       </div>
 
       <Divisory/>
-      <Contato/>
+      
 
       <Footer></Footer>
     </div>

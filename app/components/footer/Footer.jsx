@@ -5,6 +5,7 @@ import { FaGithub } from 'react-icons/fa';
 import { FaUsers } from 'react-icons/fa';
 import style from "./footer.module.css";
 import { FaInstagram } from "react-icons/fa";
+import contato from '../../contato/page';
 const Footer = () => {
     return (
         <div className={style.global}>
@@ -20,13 +21,13 @@ const Footer = () => {
                         <Link href="/sobrenos" className={style.li}>
                             Sobre Nós</Link>
                    
-                        <Link href="/contato" className={style.li}>
+                        <Link href='/contato' className={style.li}>
                             Contato</Link>
                   
                 </ul>
             </div>
             <div className={style.escrito}>
-                <p>CopyRight ©Todos os Direitos Reservados - 2023 <span className={style.span}>By Azuno</span></p>
+                <p> ©Todos os Direitos Reservados - 2023 <span className={style.span}>By Azuno</span></p>
             </div>
         </div>
     )
